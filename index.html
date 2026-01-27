@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>codeDF - Premium Landing Page Developer</title>
+    <meta name="description" content="High-performance landing pages for your business.">
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Configuration -->
+    <script src="js/config.js"></script>
+
+    <!-- Custom CSS (Animations & Overrides) -->
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body
+    class="bg-paper text-charcoal font-sans antialiased overflow-x-hidden selection:bg-indigo-brand selection:text-white relative">
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Decorative Background Grid -->
+    <div class="fixed inset-0 z-[-1] opacity-30 pointer-events-none"
+        style="background-image: radial-gradient(#CBD5E1 1px, transparent 1px); background-size: 32px 32px;">
+    </div>
+
+    <!-- Animated Blobs (Fixed Background) -->
+    <div class="blob-bg blob-1 w-[32rem] h-[32rem] top-0 -left-20 mix-blend-multiply opacity-70"></div>
+    <div class="blob-bg blob-2 w-[32rem] h-[32rem] bottom-0 -right-20 mix-blend-multiply opacity-70"></div>
+    <div
+        class="blob-bg blob-3 w-[28rem] h-[28rem] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mix-blend-multiply opacity-60">
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
+        <div class="glass-nav rounded-full px-8 py-3 flex items-center gap-8 fade-in-up">
+            <!-- Left Links -->
+            <div class="hidden md:flex items-center gap-6">
+                <a href="#home" class="text-sm font-bold nav-link">Home</a>
+                <a href="#features" class="text-sm font-bold nav-link">Features</a>
+            </div>
+
+            <!-- Brand Logo (Center) -->
+            <a href="#"
+                class="text-xl font-extrabold tracking-tight text-charcoal hover:scale-105 transition-transform">
+                codeDF<span class="text-indigo-brand">.</span>
+            </a>
+
+            <!-- Right Links -->
+            <div class="hidden md:flex items-center gap-6">
+                <a href="#pricing" class="text-sm font-bold nav-link">Pricing</a>
+                <a href="#contact" class="text-sm font-bold nav-link">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-charcoal focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-paper/95 backdrop-blur-xl z-40 transform translate-x-full transition-transform duration-300 flex flex-col items-center justify-center space-y-8">
+        <button id="close-menu-btn" class="absolute top-8 right-8 text-charcoal">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        <a href="#home" class="text-2xl font-bold text-charcoal hover:text-indigo-brand">Home</a>
+        <a href="#features" class="text-2xl font-bold text-charcoal hover:text-indigo-brand">Features</a>
+        <a href="#pricing" class="text-2xl font-bold text-charcoal hover:text-indigo-brand">Pricing</a>
+        <a href="#contact" class="text-2xl font-bold text-charcoal hover:text-indigo-brand">Contact</a>
+    </div>
+
+    <!-- Section 1: Hero -->
+    <section id="home" class="min-h-screen flex flex-col justify-center items-center px-4 pt-32 relative">
+
+        <!-- Hero Content Container -->
+        <div class="max-w-4xl mx-auto text-center space-y-8 relative z-10">
+
+            <!-- Headline -->
+            <h1
+                class="text-5xl md:text-7xl font-extrabold text-charcoal tracking-tight text-balance leading-[1.1] reveal-on-scroll fade-up">
+                From Visitor to <br>
+                <span class="text-gradient-premium">Customer</span> – All in One Page.
+            </h1>
+
+            <!-- Subheadline -->
+            <p
+                class="text-lg md:text-xl text-gray-body font-medium max-w-2xl mx-auto text-balance reveal-on-scroll fade-up delay-100">
+                High-speed landing pages. Clean code. More conversions. That's the <strong>codeDF</strong> difference.
+            </p>
+
+            <!-- Buttons -->
+            <div
+                class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 reveal-on-scroll fade-up delay-200">
+                <!-- Primary Action -->
+                <a href="#contact"
+                    class="group relative inline-flex h-14 items-center justify-center overflow-hidden rounded-full bg-indigo-brand px-10 font-bold text-white transition-all duration-300 hover:bg-indigo-premium hover:shadow-glow hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2">
+                    <span class="mr-2">Start Project</span>
+                    <svg class="h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </a>
+
+                <!-- Secondary Action -->
+                <a href="#features"
+                    class="inline-flex h-14 items-center justify-center rounded-full bg-white/5 backdrop-blur-sm border border-white/10 px-10 font-bold text-charcoal shadow-sm transition-all duration-300 hover:border-indigo-brand hover:bg-white hover:text-indigo-brand hover:shadow-glow focus:outline-none focus:ring-2 focus:ring-gray-700">
+                    Why Choose Us
+                </a>
+            </div>
+        </div>
+
+        <!-- Bento Grid Decorative Elements (Subtle Background Layers) -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none z-0 flex items-center justify-center">
+            <div
+                class="absolute -left-12 top-1/4 w-64 h-64 bg-indigo-brand/20 rounded-3xl shadow-soft transform -rotate-6 opacity-30 animate-float delay-700 blur-3xl">
+            </div>
+            <div
+                class="absolute -right-12 bottom-1/4 w-64 h-64 bg-indigo-brand/20 rounded-3xl shadow-soft transform rotate-6 opacity-30 animate-float blur-3xl">
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Section 2: Features & Workflow -->
+    <section id="features" class="py-24 px-4 relative">
+        <div class="max-w-7xl mx-auto space-y-24">
+
+            <!-- Features Block (Bento Grid) -->
+            <div class="space-y-12">
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto space-y-4 reveal-on-scroll fade-up">
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-charcoal tracking-tight">
+                        More Than Just a <span class="text-indigo-brand">Pretty Face</span>
+                    </h2>
+                    <p class="text-lg text-gray-body font-medium text-balance">
+                        Your landing page isn’t decoration — it’s a business asset.
+                        We build pages engineered to perform, convert, and scale with your growth.
+                    </p>
+                </div>
+
+                <!-- Bento Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                    <!-- Card 1: Performance -->
+                    <div
+                        class="glass-card p-8 flex flex-col justify-between group rounded-4xl reveal-on-scroll zoom-in">
+                        <div class="mb-6">
+                            <div
+                                class="h-14 w-14 rounded-2xl bg-indigo-brand/10 flex items-center justify-center text-indigo-brand mb-6 group-hover:scale-110 group-hover:bg-indigo-brand group-hover:text-white transition-all duration-300 shadow-sm border border-indigo-brand/20">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-charcoal mb-3">Ultra-Fast Performance</h3>
+                            <p class="text-gray-body font-medium leading-relaxed">We optimize every element to ensure
+                                blazing-fast load times, better SEO rankings, and lower bounce rates.</p>
+                        </div>
+                        <div class="w-full bg-gray-100 rounded-full h-1.5 overflow-hidden">
+                            <div class="bg-indigo-brand h-full w-[98%] shadow-[0_0_10px_rgba(79,70,229,0.5)]"></div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Clean Code -->
+                    <div
+                        class="glass-card p-8 flex flex-col justify-between group rounded-4xl reveal-on-scroll zoom-in delay-100">
+                        <div class="mb-6">
+                            <div
+                                class="h-14 w-14 rounded-2xl bg-indigo-brand/10 flex items-center justify-center text-indigo-brand mb-6 group-hover:scale-110 group-hover:bg-indigo-brand group-hover:text-white transition-all duration-300 shadow-sm">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-charcoal mb-3">Clean Code & Maintainable</h3>
+                            <p class="text-gray-body font-medium leading-relaxed">Built with modern standards and clean
+                                architecture.
+                                Semantic HTML, utility-first CSS, and maintainable structure make future updates
+                                effortless.</p>
+                        </div>
+                        <div class="font-mono text-xs text-indigo-300 bg-black/30 p-4 rounded-xl border border-white/5">
+                            &lt;div class="clean-architecture"&gt;...&lt;/div&gt;
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Mobile First -->
+                    <div
+                        class="glass-card p-8 flex flex-col justify-between group rounded-4xl reveal-on-scroll zoom-in delay-200">
+                        <div class="mb-6">
+                            <div
+                                class="h-14 w-14 rounded-2xl bg-indigo-brand/10 flex items-center justify-center text-indigo-brand mb-6 group-hover:scale-110 group-hover:bg-indigo-brand group-hover:text-white transition-all duration-300 shadow-sm">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-charcoal mb-3">Mobile Perfection</h3>
+                            <p class="text-gray-body font-medium leading-relaxed">Designed for the thumb-zone first.
+                                Your landing page will feel smooth, intuitive, and app-like on every screen size.</p>
+                        </div>
+                        <div class="flex justify-center space-x-2">
+                            <div class="w-2.5 h-2.5 rounded-full bg-gray-700"></div>
+                            <div class="w-2.5 h-2.5 rounded-full bg-indigo-brand shadow-[0_0_8px_rgba(99,102,241,0.5)]">
+                            </div>
+                            <div class="w-2.5 h-2.5 rounded-full bg-gray-700"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Workflow Block -->
+            <div class="space-y-12">
+                <div class="text-center max-w-3xl mx-auto space-y-4 reveal-on-scroll fade-up delay-100">
+                    <h2 class="text-3xl font-bold text-charcoal tracking-tight">
+                        Simple Workflow. <span class="text-indigo-brand">Premium Results.</span>
+                    </h2>
+                </div>
+
+                <div class="relative">
+                    <!-- Connecting Line (Desktop)-->
+                    <div
+                        class="hidden md:block absolute top-1/4 left-0 right-0 h-0.5 bg-gray-800 -translate-y-1/2 z-0 reveal-on-scroll fade-in delay-200">
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
+                        <!-- Step 1 -->
+                        <div class="text-center group reveal-on-scroll fade-up delay-200">
+                            <div
+                                class="w-16 h-16 mx-auto bg-surface border-2 border-gray-700 rounded-full flex items-center justify-center mb-4 shadow-sm group-hover:shadow-glow group-hover:shadow-indigo-500/50 group-hover:border-indigo-brand group-hover:text-white transition-colors duration-300 relative z-10 text-charcoal">
+                                <span class="text-xl font-bold">01</span>
+                            </div>
+                            <h4 class="text-lg font-bold text-charcoal mb-2">Consultant</h4>
+                            <p class="text-sm text-gray-body px-4 font-medium">We discuss your goals, target audience,
+                                and business
+                                unique value proposition.</p>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="text-center group reveal-on-scroll fade-up delay-300">
+                            <div
+                                class="w-16 h-16 mx-auto bg-surface border-2 border-gray-700 rounded-full flex items-center justify-center mb-4 shadow-sm group-hover:shadow-glow group-hover:shadow-indigo-500/50 group-hover:border-indigo-brand group-hover:text-white transition-colors duration-300 relative z-10 text-charcoal">
+                                <span class="text-xl font-bold">02</span>
+                            </div>
+                            <h4 class="text-lg font-bold text-charcoal mb-2">Wireframe</h4>
+                            <p class="text-sm text-gray-body px-4 font-medium">We design a focused layout optimized for
+                                clarity, user flow, and conversion — before writing a single line of code.</p>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="text-center group reveal-on-scroll fade-up delay-400">
+                            <div
+                                class="w-16 h-16 mx-auto bg-surface border-2 border-gray-700 rounded-full flex items-center justify-center mb-4 shadow-sm group-hover:shadow-glow group-hover:shadow-indigo-500/50 group-hover:border-indigo-brand group-hover:text-white transition-colors duration-300 relative z-10 text-charcoal">
+                                <span class="text-xl font-bold">03</span>
+                            </div>
+                            <h4 class="text-lg font-bold text-charcoal mb-2">Code</h4>
+                            <p class="text-sm text-gray-body px-4 font-medium">Development with Clean Code, Tailwind
+                                CSS,
+                                and
+                                optimized assets for speed.</p>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div class="text-center group reveal-on-scroll fade-up delay-500">
+                            <div
+                                class="w-16 h-16 mx-auto bg-surface border-2 border-gray-700 rounded-full flex items-center justify-center mb-4 shadow-sm group-hover:shadow-glow group-hover:shadow-emerald-500/50 group-hover:border-emerald-500 group-hover:text-white transition-colors duration-300 relative z-10 text-charcoal">
+                                <span class="text-xl font-bold">04</span>
+                            </div>
+                            <h4 class="text-lg font-bold text-charcoal mb-2">Launch</h4>
+                            <p class="text-sm text-gray-body px-4 font-medium">Final testing, deployment, and your
+                                business is ready
+                                to capture leads.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section 3: Pricing -->
+    <section id="pricing" class="py-24 px-4 relative bg-black/20">
+        <div class="max-w-7xl mx-auto space-y-16">
+
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto space-y-4 reveal-on-scroll fade-up">
+                <h2 class="text-3xl md:text-5xl font-extrabold text-charcoal tracking-tight">
+                    Simple, Transparent <span class="text-indigo-brand">Investment</span>
+                </h2>
+                <p class="text-lg text-gray-body font-medium text-balance">
+                    Choose the package that fits your stage. No hidden fees, just pure value.
+                </p>
+            </div>
+
+            <!-- Pricing Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+
+                <!-- Starter Package -->
+                <div
+                    class="glass-card rounded-4xl p-8 border border-white/10 relative group reveal-on-scroll fade-up flex flex-col h-full">
+                    <h3 class="text-xl font-bold text-white mb-2">Starter</h3>
+                    <div class="flex items-baseline gap-1 mb-6">
+                        <span class="text-4xl font-extrabold text-charcoal">RM399</span>
+                    </div>
+                    <p class="text-gray-body text-sm mb-8">New businesses, personal brands, simple online presence.</p>
+
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3 text-sm text-gray-body font-medium">
+                            <svg class="w-5 h-5 text-indigo-brand flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Single Page
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-gray-body font-medium">
+                            <svg class="w-5 h-5 text-indigo-brand flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Custom Design
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-gray-body font-medium">
+                            <svg class="w-5 h-5 text-indigo-brand flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Basic SEO & Performance
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-gray-body font-medium">
+                            <svg class="w-5 h-5 text-indigo-brand flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Social Media Integration
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-gray-body font-medium">
+                            <svg class="w-5 h-5 text-indigo-brand flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Hosting Included
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-gray-body font-medium">
+                            <svg class="w-5 h-5 text-indigo-brand flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            1 Revisions
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-gray-body font-medium">
+                            <svg class="w-5 h-5 text-indigo-brand flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            2-3 Days
+                        </li>
+                    </ul>
+
+                    <a href="#contact"
+                        class="mt-auto block w-full py-4 px-6 text-center text-sm font-bold text-charcoal bg-white/10 hover:border-indigo-brand hover:bg-indigo-brand hover:text-white hover:scale-[1.02] hover:shadow-glow rounded-2xl transition-all border border-white/10">
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Professional Package (Recommended) -->
+                <div
+                    class="glass-card rounded-4xl p-8 border-2 border-indigo-brand/20 relative transform md:-translate-y-4 z-10 shadow-floating reveal-on-scroll fade-up delay-200 flex flex-col h-full">
+                    <!-- Badge -->
+                    <div
+                        class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-indigo-brand text-white text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wide shadow-lg shadow-indigo-500/30">
+                        Most Popular
+                    </div>
+
+                    <h3 class="text-xl font-bold text-indigo-brand mb-2">Professional</h3>
+                    <div class="flex items-baseline gap-1 mb-6">
+                        <span class="text-5xl font-extrabold text-charcoal">RM599</span>
+                    </div>
+                    <p class="text-gray-body text-sm mb-8">Businesses that want better presentation and higher
+                        conversion.</p>
+
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3 text-sm text-gray-body font-medium">
+                            <svg class="w-5 h-5 text-indigo-brand flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Single Page (Long Form)
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-gray-body font-medium">
+                            <svg class="w-5 h-5 text-indigo-brand flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Custom Design
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-gray-body font-medium">
+                            <svg class="w-5 h-5 text-indigo-brand flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Animations & Interactions
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-gray-body font-medium">
+                            <svg class="w-5 h-5 text-indigo-brand flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Social Media Integration
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-gray-body font-medium">
+                            <svg class="w-5 h-5 text-indigo-brand flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Hosting Included
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-gray-body font-medium">
+                            <svg class="w-5 h-5 text-indigo-brand flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            1 Revisions
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-gray-body font-medium">
+                            <svg class="w-5 h-5 text-indigo-brand flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            3-5 Days
+                        </li>
+                    </ul>
+
+                    <a href="#contact"
+                        class="mt-auto block w-full py-4 px-6 text-center text-sm font-bold text-white bg-indigo-brand hover:bg-indigo-premium rounded-2xl shadow-lg shadow-indigo-500/30 transition-all hover:scale-[1.02] hover:shadow-indigo-500/50">
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Service Notes -->
+                <div
+                    class="glass-card rounded-4xl p-8 border border-indigo-brand/20 bg-surface relative group reveal-on-scroll fade-up delay-300 flex flex-col h-full">
+                    <h3 class="text-xl font-bold text-charcoal mb-4">Important Notes</h3>
+                    <p class="text-gray-body text-sm mb-8">Essential details for your project.</p>
+
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3 text-sm text-gray-body font-medium">
+                            <svg class="w-5 h-5 text-indigo-brand flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            Domain excluded.
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-gray-body font-medium">
+                            <svg class="w-5 h-5 text-indigo-brand flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            Client must provide images & text content.
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-gray-body font-medium">
+                            <svg class="w-5 h-5 text-indigo-brand flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            Completion: 2-5 days after materials received.
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-gray-body font-medium">
+                            <svg class="w-5 h-5 text-indigo-brand flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            Additional pages incur extra charges.
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-gray-body font-medium">
+                            <svg class="w-5 h-5 text-indigo-brand flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            50% deposit required before start.
+                        </li>
+                    </ul>
+
+                    <a href="#contact"
+                        class="mt-auto block w-full py-4 px-6 text-center text-sm font-bold text-indigo-brand bg-transparent border-2 border-indigo-brand/50 hover:border-indigo-brand hover:bg-indigo-brand hover:text-white hover:scale-[1.02] hover:shadow-lg rounded-2xl transition-all">
+                        Contact Us
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Testimonials -->
+    <section id="testimonials" class="relative py-24 px-4 bg-paper overflow-hidden">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-24">
+
+            <!-- Left Side: Header & Nav -->
+            <div class="w-full md:w-1/2 space-y-8 reveal-on-scroll fade-right">
+                <h2 class="text-4xl md:text-6xl font-extrabold text-charcoal tracking-tight leading-tight">
+                    From our <br> community.
+                </h2>
+                <p class="text-xl text-gray-body font-medium max-w-sm">
+                    Here’s what other subscribers had to say about codeDF.
+                </p>
+
+                <!-- Navigation Buttons -->
+                <div class="flex gap-4 pt-4">
+                    <button
+                        class="w-14 h-14 rounded-full border border-gray-700 flex items-center justify-center text-charcoal hover:bg-charcoal hover:text-paper hover:border-charcoal transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-charcoal">
+                        <svg class="w-6 h-6 transform rotate-180 transition-transform group-hover:-translate-x-1"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                    </button>
+                    <button
+                        class="w-14 h-14 rounded-full border border-gray-700 flex items-center justify-center text-charcoal hover:bg-charcoal hover:text-paper hover:border-charcoal transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-charcoal">
+                        <svg class="w-6 h-6 transition-transform group-hover:translate-x-1" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Side: Testimonial Content -->
+            <div class="w-full md:w-1/2 reveal-on-scroll fade-left delay-100">
+                <div class="space-y-8">
+                    <!-- Quote Icon -->
+                    <div class="text-indigo-brand">
+                        <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017V5H22.017V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM5.0166 21L5.0166 18C5.0166 16.8954 5.91203 16 7.0166 16H10.0166C10.5689 16 11.0166 15.5523 11.0166 15V9C11.0166 8.44772 10.5689 8 10.0166 8H6.0166C5.46432 8 5.0166 8.44772 5.0166 9V11C5.0166 11.5523 4.56889 12 4.0166 12H3.0166V5H13.0166V15C13.0166 18.3137 10.3303 21 7.0166 21H5.0166Z">
+                            </path>
+                        </svg>
+                    </div>
+
+                    <p class="text-2xl md:text-3xl text-charcoal font-medium leading-relaxed">
+                        “The conversion rate on my new landing page is <span class="text-indigo-brand font-bold">3x
+                            higher</span>. The team at codeDF really understands user psychology.”
+                    </p>
+
+                    <div class="flex items-center gap-4">
+                        <img src="images/kyle_profile.png" alt="Jason Mendoza"
+                            class="w-16 h-16 rounded-full object-cover shadow-sm ring-4 ring-gray-800">
+                        <div>
+                            <h4 class="font-bold text-charcoal text-lg">Jason Mendoza</h4>
+                            <p class="text-gray-body font-medium">Founder, HiveMind</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section 5: Contact / CTA -->
+    <section id="contact" class="py-24 px-4 relative">
+        <div class="max-w-7xl mx-auto reveal-on-scroll fade-up">
+            <div
+                class="bg-surface/50 border border-white/5 rounded-3xl p-8 md:p-16 shadow-floating overflow-hidden relative">
+                <!-- Decorative Background -->
+                <div
+                    class="absolute top-0 right-0 -mt-16 -mr-16 w-64 h-64 bg-indigo-brand rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob">
+                </div>
+                <div
+                    class="absolute bottom-0 left-0 -mb-16 -ml-16 w-64 h-64 bg-indigo-brand rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000">
+                </div>
+
+                <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <!-- Left: Text -->
+                    <div class="space-y-6 text-center md:text-left">
+                        <h2 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight">
+                            Ready to Scale Your <br>
+                            <span class="text-indigo-400">Digital Presence?</span>
+                        </h2>
+                        <p class="text-lg text-gray-400 font-medium max-w-md mx-auto md:mx-0">
+                            Stop losing customers to slow, outdated websites.
+                            Let’s build a high-performance landing page that turns visitors into revenue.
+                        </p>
+                    </div>
+
+                    <!-- Right: Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-end">
+                        <!-- WhatsApp Button -->
+                        <a href="https://wa.me/60183178107?text=Hi%20codeDF%2C%20saya%20datang%20dari%20website%20anda%20dan%20berminat%20untuk%20bina%20landing%20page%20bagi%20bisnes%20saya.%20Boleh%20kita%20bincang%20keperluan%20saya%3F"
+                            target="_blank"
+                            class="inline-flex items-center justify-center h-14 px-8 rounded-full bg-[#25D366] text-white font-bold text-lg hover:bg-green-600 transition-all duration-300 shadow-lg hover:shadow-green-500/30 hover:scale-105 group">
+                            <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                            </svg>
+                            WhatsApp
+                        </a>
+
+                        <!-- Telegram Button -->
+                        <a href="https://t.me/nishyx" target="_blank"
+                            class="inline-flex items-center justify-center h-14 px-8 rounded-full bg-[#0088cc] text-white font-bold text-lg hover:bg-sky-600 transition-all duration-300 shadow-lg hover:shadow-sky-500/30 hover:scale-105">
+                            <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 11.944 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+                            </svg>
+                            Telegram
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-paper border-t border-white/5 py-12">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+
+            <!-- Branding -->
+            <div class="flex items-center gap-2">
+                <span class="text-xl font-extrabold text-charcoal">
+                    codeDF<span class="text-indigo-brand">.</span>
+                </span>
+                <span class="text-xs text-gray-body">|</span>
+                <span class="text-sm text-gray-body"> 2026 All Rights Reserved.</span>
+            </div>
+
+            <!-- Links -->
+            <div class="flex gap-6 text-sm text-gray-body">
+                <a href="privacy-policy.html" class="hover:text-indigo-brand transition-colors">Privacy Policy</a>
+                <a href="terms-of-service.html" class="hover:text-indigo-brand transition-colors">Terms of Service</a>
+            </div>
+
+            <!-- Credits -->
+            <div class="text-sm text-gray-body">
+                Designed & Built by <span class="font-bold text-indigo-brand">codeDF</span>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Load Logic Script -->
+    <script src="js/cursor.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
