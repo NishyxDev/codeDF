@@ -8,16 +8,16 @@ tailwind.config = {
                 paper: '#020617', // Slate 950 (Deepest Background)
                 charcoal: '#F1F5F9', // Slate 100 (Primary Text - inversed from original charcoal)
                 indigo: {
-                    brand: '#6366F1', // Indigo 500 (Brighter for dark mode)
-                    premium: '#4F46E5', // Indigo 600
-                    glow: '#818CF8', // Indigo 400 (For glows)
+                    brand: '#8B92FF', // Brightened for WCAG AAA contrast
+                    premium: '#6366F1', // Indigo 500
+                    glow: '#A5A9FF', // Brighter glow
                 },
                 surface: {
                     DEFAULT: '#0F172A', // Slate 900 (Card Background)
                     highlight: '#1E293B', // Slate 800 (Hover/Highlight)
                 },
                 gray: {
-                    body: '#94A3B8', // Slate 400 (Secondary Text)
+                    body: '#B4BFD4', // Brightened for WCAG AAA contrast
                     dark: '#0F172A', // Slate 900 (For inverse elements if needed)
                 }
             },

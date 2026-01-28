@@ -4,9 +4,9 @@
     /* Deep Slate/Black */
     --color-charcoal: #F1F5F9;
     /* White Text */
-    --color-indigo: #6366F1;
-    /* Brighter Indigo */
-    --color-indigo-premium: #4F46E5;
+    --color-indigo: #8B92FF;
+    /* Brightened for WCAG AAA */
+    --color-indigo-premium: #6366F1;
     --shadow-soft: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
 }
 
