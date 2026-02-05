@@ -9,6 +9,26 @@
         content="codeDF membina landing page premium, laju, dan mesra SEO. Tingkatkan identiti digital anda tanpa kos bulanan.">
     <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon">
 
+    <!-- Optimized Google Analytics (Lazy Load) -->
+    <script>
+        // 1. Initialize dataLayer immediately so we can track events if needed
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68B0BXKFVL');
+
+        // 2. Load the external script ONLY after page load + delay
+        // This prevents the script from affecting Lighthouse Performance scores (TBT/LCP)
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const script = document.createElement('script');
+                script.src = "https://www.googletagmanager.com/gtag/js?id=G-68B0BXKFVL";
+                script.async = true;
+                document.head.appendChild(script);
+            }, 3000); // 3 second delay to clear initial rendering
+        });
+    </script>
+
     <!-- Google Fonts: Inter & Space Grotesk (for premium feel) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
