@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="ms" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>codeDF - Landing Page Murah & Premium untuk Bisnes Anda</title>
+    <meta name="description"
+        content="codeDF membina landing page premium, laju, dan mesra SEO. Tingkatkan identiti digital anda tanpa kos bulanan.">
+    <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon">
+
+    <!-- Google Fonts: Inter & Space Grotesk (for premium feel) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Preload Critical Assets -->
+    <link rel="preload" href="assets/newlogo.webp" as="image" type="image/webp">
+    <link rel="preload" href="assets/tailwind.min.css" as="style">
+
+    <!-- Tailwind CSS (Optimized Build) -->
+    <link rel="stylesheet" href="assets/tailwind.min.css">
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            background-color: #020617;
+            /* Slate 950 */
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .glass-nav {
+            background: rgba(2, 6, 23, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .glass-card {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(30, 41, 59, 0.5);
+            /* slate-800/50 */
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #22d3ee, #3b82f6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Blobs for background */
+        .blob {
+            position: absolute;
+            filter: blur(80px);
+            z-index: -1;
+            opacity: 0.4;
+        }
+
+        /* Focus states for buttons and interactive elements */
+        a:focus-visible,
+        button:focus-visible {
+            outline: 2px solid #06b6d4;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-cyan-500 selection:text-white">
+
+    <!-- Background Glows -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+        <div class="blob bg-cyan-800 w-96 h-96 rounded-full top-0 left-0 -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="blob bg-blue-800 w-80 h-80 rounded-full bottom-0 right-0 translate-x-1/3 translate-y-1/3"></div>
+    </div>
+
+    <!-- 1. Header (Sticky Navigation) -->
+    <header id="main-header" class="fixed top-0 w-full z-50 transition-all duration-300 py-4">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <nav class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="#" class="block hover:opacity-80 transition">
+                    <img src="assets/newlogo.webp" alt="codeDF Logo" class="h-10 md:h-12 w-auto object-contain"
+                        width="200" height="80" fetchpriority="high">
+                </a>
+
+                <!-- Desktop Menu -->
+                <ul class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
+                    <li><a href="#" class="hover:text-cyan-400 transition" aria-current="page">Home</a></li>
+                    <li><a href="#services" class="hover:text-cyan-400 transition">Services</a></li>
+                    <li><a href="#pricing" class="hover:text-cyan-400 transition">Pricing</a></li>
+                </ul>
+
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="https://wa.me/60183178107?text=Hi%20Saya%20Nak%20Buat%20Landing%20Page"
+                        class="px-5 py-2.5 rounded-full border border-slate-600 text-sm font-medium hover:border-cyan-400 hover:text-cyan-400 hover:shadow-[0_0_15px_rgba(34,211,238,0.2)] transition-all duration-300">
+                        Hubungi Saya
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none"
+                    aria-label="Toggle navigation menu" aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </nav>
+
+            <!-- Mobile Menu Dropdown -->
+            <div id="mobile-menu"
+                class="hidden md:hidden mt-4 bg-slate-900/95 backdrop-blur-md rounded-xl border border-slate-800 p-4 absolute left-4 right-4 shadow-xl">
+                <ul class="flex flex-col space-y-4 text-center">
+                    <li><a href="#" class="block text-slate-300 hover:text-cyan-400 py-2" aria-current="page">Home</a>
+                    </li>
+                    <li><a href="#services" class="block text-slate-300 hover:text-cyan-400 py-2">Service</a></li>
+                    <li><a href="#pricing" class="block text-slate-300 hover:text-cyan-400 py-2">Pricing</a></li>
+                    <li><a href="https://wa.me/60183178107?text=Hi%20Saya%20Nak%20Buat%20Landing%20Page"
+                            class="block text-cyan-400 font-bold py-2">Hubungi Saya</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <div class="container mx-auto px-6 max-w-7xl relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+
+                <!-- Text Content -->
+                <div class="lg:w-1/2 text-center lg:text-left opacity-0 animate-fade-in-up"
+                    style="animation-delay: 0.1s;">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/30 border border-cyan-800/50 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-6">
+                        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                        Still Available
+                    </div>
+
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-heading font-bold leading-tight mb-6">
+                        Landing Page <span class="text-gradient">Bajet</span><br>
+                        Tetapi <span class="text-gradient">Berkualiti Tinggi</span>
+                    </h1>
+
+                    <p class="text-lg md:text-xl text-slate-400 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Bina identiti digital profesional anda dengan kami. Laju, responsif, dan mesra Google
+                        – tanpa kos bulanan yang mahal.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#pricing"
+                            class="w-full sm:w-auto px-8 py-4 rounded-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold transition-all shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:shadow-[0_0_30px_rgba(6,182,212,0.6)] transform hover:-translate-y-1">
+                            Mula Bina Website
+                        </a>
+                        <a href="#portfolio"
+                            class="w-full sm:w-auto px-8 py-4 rounded-full border border-slate-700 hover:border-slate-500 text-white font-medium hover:bg-slate-800/50 transition-all">
+                            Lihat Portfolio
+                        </a>
+                    </div>
+
+                    <div class="mt-8 flex items-center justify-center lg:justify-start gap-2 text-sm text-slate-500">
+                        <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        <span>Siap sepantas 3-7 hari</span>
+                        <svg class="w-5 h-5 text-green-500 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        <span>Support berterusan</span>
+                    </div>
+                </div>
+
+                <!-- Graphic/Visual -->
+                <div class="lg:w-1/2 relative opacity-0 animate-fade-in-up" style="animation-delay: 0.3s;">
+                    <!-- Code Snippet Visual -->
+                    <div
+                        class="relative rounded-2xl bg-[#1e1e1e] border border-slate-700 shadow-2xl p-4 md:p-6 transform rotate-2 hover:rotate-0 transition-transform duration-500 font-mono text-sm md:text-base cursor-default group">
+
+                        <!-- Window Controls -->
+                        <div class="flex gap-2 mb-4">
+                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        </div>
+
+                        <!-- Code -->
+                        <div class="space-y-1 text-slate-300">
+                            <div class="flex"><span class="text-pink-400 mr-2">const</span> <span
+                                    class="text-blue-400">website</span> <span class="text-white">=</span> <span
+                                    class="text-yellow-300">{</span></div>
+                            <div class="pl-4"><span class="text-blue-300">speed</span>: <span
+                                    class="text-green-400">'100/100'</span>,</div>
+                            <div class="pl-4"><span class="text-blue-300">seo</span>: <span
+                                    class="text-green-400">'Optimized'</span>,</div>
+                            <div class="pl-4"><span class="text-blue-300">responsive</span>: <span
+                                    class="text-pink-400">true</span>,</div>
+                            <div class="pl-4"><span class="text-blue-300">tech</span>: <span
+                                    class="text-yellow-300">[</span><span class="text-orange-400">'HTML5'</span>, <span
+                                    class="text-cyan-400">'Tailwind'</span><span class="text-yellow-300">]</span></div>
+                            <div class="flex"><span class="text-yellow-300">}</span>;</div>
+                            <div class="flex mt-4"><span class="text-slate-500">// Ready to launch?</span></div>
+                            <div class="flex"><span class="text-purple-400">launchWebsite</span>(<span
+                                    class="text-blue-400">website</span>); <span class="animate-pulse">|</span></div>
+                        </div>
+
+                        <!-- Glow Effect behind card -->
+                        <div
+                            class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-500 -z-10">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Social Proof / Trust Bar -->
+    <section class="py-10 border-t border-slate-900 bg-slate-950/50">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-sm text-slate-300 mb-6 font-medium">DIKUASAKAN OLEH TEKNOLOGI WEB TERKINI:</p>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 transition-all duration-500">
+
+                <!-- HTML5 -->
+                <div
+                    class="group flex flex-col items-center gap-2 transition-all duration-300 hover:scale-110 cursor-pointer">
+                    <svg class="w-10 h-10 text-orange-500 opacity-60 group-hover:opacity-100 transition"
+                        fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M1.5 0h21l-1.91 21.605L12 24 3.41 21.605 1.5 0zm17.65 2.5H4.85l1.52 17.16L12 21.25l5.62-1.59 1.53-17.16zM12 18.06l-4.22-1.18-.32-3.61h1.56l.16 2.08 2.82.76 2.82-.76.25-2.82H7.43l-.14-1.56h6.73l.14-1.56H7.13l-.14-1.56h9.12l-.93 10.41L12 18.06z" />
+                    </svg>
+                    <span class="text-xs text-slate-600 group-hover:text-slate-300 font-bold">HTML5</span>
+                </div>
+
+                <!-- Tailwind -->
+                <div
+                    class="group flex flex-col items-center gap-2 transition-all duration-300 hover:scale-110 cursor-pointer">
+                    <svg class="w-10 h-10 text-cyan-400 opacity-60 group-hover:opacity-100 transition"
+                        viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z" />
+                    </svg>
+                    <span class="text-xs text-slate-600 group-hover:text-slate-300 font-bold">Tailwind</span>
+                </div>
+
+                <!-- JavaScript -->
+                <div
+                    class="group flex flex-col items-center gap-2 transition-all duration-300 hover:scale-110 cursor-pointer">
+                    <svg class="w-10 h-10 text-yellow-500 opacity-60 group-hover:opacity-100 transition"
+                        fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.06-.209.03-.419.074-.584zM6.6 13.065V18.276h-2.31V9h2.325v7.41c0 .765.255 1.11.855 1.11.75 0 1.2-.676 1.2-1.71V9h2.295v7.56c0 1.049-.12 1.74-.466 2.28-.48.779-1.41 1.154-2.489 1.154-1.02 0-1.875-.36-2.43-1.004-.3-.361-.435-.646-.585-.929z" />
+                    </svg>
+                    <span class="text-xs text-slate-600 group-hover:text-slate-300 font-bold">JavaScript</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 4. Service Highlights -->
+    <section id="services" class="py-20 relative">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="text-center mb-16 reveal-on-scroll">
+                <h2 class="text-3xl md:text-5xl font-heading font-bold mb-4">Kenapa <span
+                        class="text-cyan-400">codeDF</span>?</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Kami tidak menggunakan website builder yang berat. Kami
+                    menulis kod dari mula untuk prestasi yang maksimum.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1: Speed -->
+                <div
+                    class="glass-card p-8 rounded-2xl hover:border-cyan-500/50 transition-all duration-300 hover:-translate-y-2 group reveal-on-scroll">
+                    <div
+                        class="w-14 h-14 bg-cyan-900/30 rounded-xl flex items-center justify-center mb-6 group-hover:bg-cyan-500/20 transition">
+                        <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Kod Bersih & Laju</h3>
+                    <p class="text-slate-400 leading-relaxed">Tiada bloatware atau kod yang tidak perlu. Page load bawah
+                        1 saat
+                        untuk memastikan pelawat tidak lari.</p>
+                </div>
+
+                <!-- Card 2: SEO -->
+                <div class="glass-card p-8 rounded-2xl hover:border-purple-500/50 transition-all duration-300 hover:-translate-y-2 group reveal-on-scroll"
+                    style="animation-delay: 0.2s;">
+                    <div
+                        class="w-14 h-14 bg-purple-900/30 rounded-xl flex items-center justify-center mb-6 group-hover:bg-purple-500/20 transition">
+                        <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Ranking Lebih Tinggi</h3>
+                    <p class="text-slate-400 leading-relaxed">Struktur HTML semantik yang disukai oleh bot Google. Mudah
+                        untuk naik ranking di search engine.</p>
+                </div>
+
+                <!-- Card 3: Mobile -->
+                <div class="glass-card p-8 rounded-2xl hover:border-pink-500/50 transition-all duration-300 hover:-translate-y-2 group reveal-on-scroll"
+                    style="animation-delay: 0.4s;">
+                    <div
+                        class="w-14 h-14 bg-pink-900/30 rounded-xl flex items-center justify-center mb-6 group-hover:bg-pink-500/20 transition">
+                        <svg class="w-8 h-8 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Penuh Responsif</h3>
+                    <p class="text-slate-400 leading-relaxed">Nampak cantik pada semua device. Pengalaman
+                        pengguna yang lancar di semua skrin.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Pricing Table -->
+    <section id="pricing" class="py-20 bg-slate-900/30">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="text-center mb-16 reveal-on-scroll">
+                <h2 class="text-3xl md:text-5xl font-heading font-bold mb-4">Pakej <span class="text-gradient">Mampu
+                        Milik</span></h2>
+                <p class="text-slate-400">Harga bajet dengan kualiti premium.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Starter Package -->
+                <div
+                    class="glass-card p-8 rounded-3xl border-slate-800 hover:border-slate-600 transition-all reveal-on-scroll relative overflow-hidden">
+                    <h3 class="text-2xl font-bold text-white mb-2">Pakej Starter</h3>
+                    <div class="text-4xl font-heading font-bold text-cyan-400 mb-6">RM299</div>
+                    <ul class="space-y-4 mb-8 text-slate-300">
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-400 mr-3" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> Single Landing Page</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-400 mr-3" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> Custom Design</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-400 mr-3" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> Basic SEO Setup</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-400 mr-3" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> Free Hosting</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-400 mr-3" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> Social Media Integration</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-400 mr-3" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> 1 Revision</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-400 mr-3" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> 2-3 Days</li>
+                    </ul>
+                    <a href="#contact-form"
+                        class="block w-full py-3 text-center rounded-xl border border-slate-600 hover:border-white hover:text-white transition-all text-slate-300 font-medium">Pilih
+                        Starter</a>
+                </div>
+
+                <!-- Business Package -->
+                <div
+                    class="glass-card p-8 rounded-3xl border-cyan-500/50 shadow-[0_0_30px_rgba(6,182,212,0.15)] relative overflow-hidden reveal-on-scroll transform md:-translate-y-4">
+                    <div
+                        class="absolute top-0 right-0 bg-gradient-to-l from-cyan-500 to-blue-600 text-white text-xs font-bold px-4 py-1 rounded-bl-xl">
+                        POPULAR</div>
+                    <h3 class="text-2xl font-bold text-white mb-2">Pakej Business</h3>
+                    <div class="text-4xl font-heading font-bold text-cyan-400 mb-6">RM599</div>
+                    <ul class="space-y-4 mb-8 text-slate-300">
+                        <li class="flex items-center"><svg class="w-5 h-5 text-cyan-400 mr-3" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> Multiple Page Website</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-cyan-400 mr-3" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> Custom Design</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-cyan-400 mr-3" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> Form Integration</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-cyan-400 mr-3" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> Free Hosting</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-cyan-400 mr-3" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> Advanced SEO Tracking (GA4)</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-cyan-400 mr-3" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> 1 Revision</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-cyan-400 mr-3" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> 5-7 Days</li>
+
+                    </ul>
+                    <a href="#contact-form"
+                        class="block w-full py-3 text-center rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold shadow-lg transition-all hover:shadow-cyan-500/25">Pilih
+                        Business</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Technical Section (Comparison) -->
+    <section id="tech-compare" class="py-20">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="text-center mb-16 reveal-on-scroll">
+                <h2 class="text-3xl md:text-5xl font-heading font-bold mb-4">Custom Code vs <span
+                        class="text-red-400">Website Builder</span></h2>
+                <p class="text-slate-400">Kenapa bisnes profesional pilih kod yang bersih.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-0 md:gap-12 items-center max-w-5xl mx-auto">
+                <!-- Wix/Wordpress/Builder -->
+                <div
+                    class="p-8 rounded-3xl bg-red-950/20 border border-red-900/50 opacity-70 hover:opacity-100 transition-all duration-500 reveal-on-scroll">
+                    <h3 class="text-2xl font-bold text-red-400 mb-6 flex items-center">
+                        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        Website Builder
+                    </h3>
+                    <ul class="space-y-4 text-slate-400">
+                        <li class="flex items-start"><span class="text-red-500 mr-2">✕</span> Lembap & berat (banyak
+                            kod yang tak perlu)</li>
+                        <li class="flex items-start"><span class="text-red-500 mr-2">✕</span> Kena bayar bulan-bulan
+                            mahal</li>
+                        <li class="flex items-start"><span class="text-red-500 mr-2">✕</span> Structure SEO yang susah
+                            kawal</li>
+                        <li class="flex items-start"><span class="text-red-500 mr-2">✕</span> Design template yang
+                            nampak murah</li>
+                    </ul>
+                </div>
+
+                <!-- Custom Code -->
+                <div
+                    class="p-8 rounded-3xl bg-cyan-950/20 border border-cyan-500/50 shadow-[0_0_40px_rgba(6,182,212,0.1)] relative reveal-on-scroll scale-105">
+                    <div
+                        class="absolute -top-3 -right-3 md:-right-6 bg-cyan-500 text-black font-bold px-4 py-1 rounded-full text-sm">
+                        WINNER</div>
+                    <h3 class="text-2xl font-bold text-cyan-400 mb-6 flex items-center">
+                        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        Custom Code (KAMI)
+                    </h3>
+                    <ul class="space-y-4 text-white">
+                        <li class="flex items-start"><span class="text-green-400 mr-2">✓</span> <strong
+                                class="text-cyan-200">Performance Laju</strong> (Skor 95-100 Lighthouse)</li>
+                        <li class="flex items-start"><span class="text-green-400 mr-2">✓</span> <strong
+                                class="text-cyan-200">Bayar sekali je</strong> (Tiada komitmen bulanan)</li>
+                        <li class="flex items-start"><span class="text-green-400 mr-2">✓</span> <strong
+                                class="text-cyan-200">SEO Senang</strong> (Markup yang bersih)</li>
+                        <li class="flex items-start"><span class="text-green-400 mr-2">✓</span> <strong
+                                class="text-cyan-200">Custom Design</strong> & Unik</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. FAQ Section -->
+    <section id="faq" class="py-20 bg-slate-900/30">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="text-center mb-16 reveal-on-scroll">
+                <h2 class="text-3xl md:text-5xl font-heading font-bold mb-4">Soalan <span
+                        class="text-gradient">Lazim</span></h2>
+                <p class="text-slate-400">Jawapan untuk pertanyaan anda.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="glass-card rounded-2xl reveal-on-scroll overflow-hidden transition-all duration-300">
+                    <button
+                        class="faq-toggle w-full flex justify-between items-center p-6 md:p-8 text-left focus:outline-none group"
+                        aria-expanded="false" aria-controls="faq-1-content">
+                        <span class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">1. Kenapa
+                            saya perlu pilih "Custom Code" berbanding guna Website Builder?</span>
+                        <svg class="w-6 h-6 text-slate-500 transform transition-transform duration-300 group-hover:text-cyan-400"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div id="faq-1-content"
+                        class="hidden px-6 md:px-8 pb-8 text-slate-400 leading-relaxed border-t border-slate-800/50 pt-4">
+                        Website builder selalunya berat dengan kod yang tidak perlu, menyebabkan website jadi lembap.
+                        Saya menulis kod secara manual (Custom Code) untuk memastikan website anda lebih laju,
+                        selamat, dan mudah untuk naik di ranking Google (SEO).
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="glass-card rounded-2xl reveal-on-scroll overflow-hidden transition-all duration-300">
+                    <button
+                        class="faq-toggle w-full flex justify-between items-center p-6 md:p-8 text-left focus:outline-none group"
+                        aria-expanded="false" aria-controls="faq-2-content">
+                        <span class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">2. Adakah
+                            harga "bajet" bermaksud kualiti rendah?</span>
+                        <svg class="w-6 h-6 text-slate-500 transform transition-transform duration-300 group-hover:text-cyan-400"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div id="faq-2-content"
+                        class="hidden px-6 md:px-8 pb-8 text-slate-400 leading-relaxed border-t border-slate-800/50 pt-4">
+                        Tidak sama sekali. Harga saya lebih kompetitif kerana saya tidak menggunakan sistem berbayar
+                        bulanan yang mahal. Anda hanya membayar untuk hasil kerja tangan saya. Anda mendapat kualiti
+                        premium, moden, dan eksklusif tanpa kos tersembunyi.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="glass-card rounded-2xl reveal-on-scroll overflow-hidden transition-all duration-300">
+                    <button
+                        class="faq-toggle w-full flex justify-between items-center p-6 md:p-8 text-left focus:outline-none group"
+                        aria-expanded="false" aria-controls="faq-3-content">
+                        <span class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">3.
+                            Website ini nanti mesra SEO tak?</span>
+                        <svg class="w-6 h-6 text-slate-500 transform transition-transform duration-300 group-hover:text-cyan-400"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div id="faq-3-content"
+                        class="hidden px-6 md:px-8 pb-8 text-slate-400 leading-relaxed border-t border-slate-800/50 pt-4">
+                        Ya, pasti! Saya menggunakan struktur Semantic HTML yang membantu bot Google memahami kandungan
+                        website anda dengan lebih baik. Digabungkan dengan kelajuan loading yang tinggi, website anda
+                        mempunyai peluang lebih besar untuk berada di muka depan Google.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="glass-card rounded-2xl reveal-on-scroll overflow-hidden transition-all duration-300">
+                    <button
+                        class="faq-toggle w-full flex justify-between items-center p-6 md:p-8 text-left focus:outline-none group"
+                        aria-expanded="false" aria-controls="faq-4-content">
+                        <span class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">4. Berapa
+                            lama tempoh untuk siapkan satu Landing Page?</span>
+                        <svg class="w-6 h-6 text-slate-500 transform transition-transform duration-300 group-hover:text-cyan-400"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div id="faq-4-content"
+                        class="hidden px-6 md:px-8 pb-8 text-slate-400 leading-relaxed border-t border-slate-800/50 pt-4">
+                        Bergantung kepada keperluan, tetapi kebiasaannya saya boleh siapkan dalam masa 3 hingga 7 hari
+                        bekerja selepas semua maklumat dan bahan (gambar/teks) diterima.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Tally Form Section -->
+    <section id="contact-form" class="py-20 relative">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="text-center mb-12 reveal-on-scroll">
+                <h2 class="text-3xl md:text-5xl font-heading font-bold mb-4">Mulakan <span
+                        class="text-gradient">Projek</span></h2>
+                <p class="text-slate-400">Isi borang di bawah untuk dapatkan sebut harga pantas.</p>
+            </div>
+
+            <div class="glass-card p-2 md:p-6 rounded-3xl reveal-on-scroll">
+                <iframe
+                    data-tally-src="https://tally.so/embed/1AV07p?hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                    loading="lazy" width="100%" height="200" frameborder="0" marginheight="0" marginwidth="0"
+                    title="codeDF Contact Form - Get Quick Quote"
+                    aria-label="Contact form for codeDF landing page services"></iframe>
+            </div>
+        </div>
+    </section>
+    <script>
+        // Lazy load Tally script when form section is visible
+        (function () {
+            const tallyObserver = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting) {
+                    var d = document, w = "https://tally.so/widgets/embed.js", v = function () {
+                        "undefined" != typeof Tally ? Tally.loadEmbeds() : d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function (e) { e.src = e.dataset.tallySrc }))
+                    };
+                    if ("undefined" != typeof Tally) v();
+                    else if (d.querySelector('script[src="' + w + '"]') == null) {
+                        var s = d.createElement("script");
+                        s.src = w, s.onload = v, s.onerror = v, d.body.appendChild(s);
+                    }
+                    tallyObserver.disconnect();
+                }
+            }, { rootMargin: '100px' });
+
+            const formSection = document.querySelector('#contact-form');
+            if (formSection) {
+                tallyObserver.observe(formSection);
+            }
+        })();
+    </script>
+
+    <!-- 9. Footer -->
+    <footer id="footer" class="bg-slate-900 border-t border-slate-800 pt-16 pb-8">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="grid md:grid-cols-3 gap-12 mb-12">
+                <!-- Col 1 -->
+                <div>
+                    <a href="#" class="mb-4 block hover:opacity-80 transition">
+                        <img src="assets/newlogo.webp" alt="codeDF Logo" class="h-10 md:h-14 w-auto object-contain"
+                            width="200" height="80">
+                    </a>
+                    <p class="text-slate-400 mb-6">
+                        Membantu usahawan Malaysia membina aset digital yang berprestasi tinggi.
+                    </p>
+                    <div class="flex space-x-4">
+                        <!-- Socials -->
+                        <!-- Telegram -->
+                        <a href="https://t.me/nishyx"
+                            class="w-10 h-10 rounded-full bg-blue-600/50 flex items-center justify-center text-slate-400 hover:bg-blue-400 hover:text-white transition-all">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42l10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001l-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15l4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-.128-1.832z" />
+                            </svg>
+                        </a>
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/60183178107?text=Hi%20Saya%20Nak%20Buat%20Landing%20Page"
+                            class="w-10 h-10 rounded-full bg-green-900/50 flex items-center justify-center text-green-400 hover:bg-green-500 hover:text-white transition-all">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.017-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h4 class="text-white font-bold mb-4">Pautan Pantas</h4>
+                    <ul class="space-y-2 text-slate-400 text-sm">
+                        <li><a href="#services" class="hover:text-cyan-400 transition">Servis Kami</a></li>
+                        <li><a href="#pricing" class="hover:text-cyan-400 transition">Pakej Harga</a></li>
+                        <li><a href="#tech-compare" class="hover:text-cyan-400 transition">Kelebihan Custom</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition">Portolio</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h4 class="text-white font-bold mb-4">Lokasi</h4>
+                    <p class="text-slate-400 text-sm mb-4">
+                        Beroperasi sepenuhnya secara remote.<br>Melayani klien seluruh Malaysia.
+                    </p>
+                    <a href="mailto:danishbizmy@gmail.com"
+                        class="text-cyan-400 hover:text-white transition text-sm">danishbizmy@gmail.com</a>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500">
+                <p>&copy; 2026 codeDF. All rights reserved.</p>
+                <p class="mt-2 md:mt-0 flex items-center">
+                    Web Designed by <span class="text-cyan-600 ml-1 font-bold">codeDF</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Placeholder for JS -->
+    <script src="assets/main.js" defer></script>
+</body>
+
+</html>
